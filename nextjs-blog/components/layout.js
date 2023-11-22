@@ -5,7 +5,7 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
 const name = 'Racheal';
-export const siteTitle = 'Next.js Sample Website';
+export const siteTitle = 'GlobalJoye Website';
 
 export default function Layout({ children, home }) {
   return (
@@ -16,7 +16,7 @@ export default function Layout({ children, home }) {
           name="description"
           content="Learning how to build a personal website using Next.js"
         />
-        <meta
+        <meta //  used to describe a page's content
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
             siteTitle,
@@ -26,7 +26,7 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
-        {home ? (
+        {home ? (   // Boolean home prop which will adjust the size of the title and the image
           <>
             <Image
               priority
@@ -59,7 +59,7 @@ export default function Layout({ children, home }) {
         )}
       </header>
       <main>{children}</main>
-      {!home && (
+      {!home && ( // "Back to home" link at the bottom if home is false
         <div className={styles.backToHome}>
           <Link href="/">← Back to home</Link>
         </div>
