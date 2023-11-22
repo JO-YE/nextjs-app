@@ -1,8 +1,17 @@
+import Link from "next/link";
+import Head from 'next/head';
+
 const firstPost = () => {
   return (
-    <div>
+    <>
+      <Head>
+        <title>First Post</title>
+      </Head>
       <h1>First Post</h1>
-    </div>
+      <h2>
+        <Link href="/">Back to home</Link>
+      </h2>
+    </>
   );
 };
 
